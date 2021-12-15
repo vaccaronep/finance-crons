@@ -1,0 +1,23 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "pwa-node",
+            "request": "launch",
+            "name": "Debug Foreign Robot",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}\\arbitrage_foreign.js"
+        },
+        {
+            "type": "pwa-node",
+            "request": "launch",
+            "name": "Debug Local v2 Robot",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "program": "${workspaceFolder}\\arbitrage_local_new.js"
+        }
+    ]
+}

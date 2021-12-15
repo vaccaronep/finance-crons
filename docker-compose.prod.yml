@@ -1,0 +1,40 @@
+version: "3.7"
+
+services:
+
+  exchanges_redis:
+    image: redis
+    container_name: exchanges_redis
+    environment:
+      - ALLOW_EMPTY_PASSWORD=yes
+    ports:
+      - 6379:6379
+
+  redis-commander:
+    container_name: exchanges_api-commander
+    image: rediscommander/redis-commander
+    restart: always
+    environment:
+      - REDIS_HOSTS=local:exchanges_redis:6379
+    ports:
+      - "8081:8081"
+
+  server:
+    container_name: exchanges_api
+    build:
+      context: ./
+      dockerfile: Dockerfile
+      target: production
+    environment:
+      REDIS_URL: exchanges_redis:6379
+      CHOKIDAR_USEPOLLING: 'true'
+      CHOKIDAR_INTERVAL: 1000
+    ports:
+     - 5000:5000
+    volumes:
+      - ./:/var/app
+    depends_on:
+      - exchanges_redis
+    command: node dist/app.js
+      
+

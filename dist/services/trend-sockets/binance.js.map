@@ -1,0 +1,1 @@
+{"version":3,"file":"binance.js","sourceRoot":"","sources":["../../../src/services/trend-sockets/binance.ts"],"names":[],"mappings":";;;;;;;;;;;;AACA,qDAAsD;AAEtD,MAAa,YAAa,SAAQ,qBAAW;IAC3C,YAAY,KAAe,EAAE,UAAyB;QACpD,KAAK,CAAC,KAAK,EAAE,UAAU,CAAC,CAAC;IAC3B,CAAC;IAEK,OAAO;;YACX,EAAE;QACJ,CAAC;KAAA;CACF;AARD,oCAQC"}
