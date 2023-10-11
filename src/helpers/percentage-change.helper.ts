@@ -6,5 +6,5 @@ export function checkConsiderablePercentageMovement(oldValue: number, newValue: 
 
     if (percentageMove < 0) percentageMove *= -1;
 
-    return percentageMove >= validPercentage;
+    return percentageMove >= (validPercentage * 100);
 }

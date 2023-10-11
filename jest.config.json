@@ -1,0 +1,12 @@
+{
+  "roots": [
+    "<rootDir>"
+  ],
+  "transform": {
+    "^.+\\.ts?$": "ts-jest"
+  },
+  "testPathIgnorePatterns": [
+    "/dist",
+    "/src/__tests__"
+  ]
+}
